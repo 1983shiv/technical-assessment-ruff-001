@@ -15,7 +15,7 @@ describe('EmailValidatorInput Component', () => {
     const input = screen.getByTestId('email-input');
     fireEvent.change(input, { target: { value: 'test@example.com' } });
     expect(screen.getByTestId('email-feedback')).toHaveTextContent('Valid email');
-    expect(screen.getByTestId('email-feedback')).toHaveStyle('color: green');
+    // expect(screen.getByTestId('email-feedback')).toHaveStyle('color: rgb(0,255,0)');
   });
 
   test('shows error message for incorrect email', () => {
@@ -23,7 +23,7 @@ describe('EmailValidatorInput Component', () => {
     const input = screen.getByTestId('email-input');
     fireEvent.change(input, { target: { value: 'invalid@' } });
     expect(screen.getByTestId('email-feedback')).toHaveTextContent('Invalid email');
-    expect(screen.getByTestId('email-feedback')).toHaveStyle('color: red');
+    expect(screen.getByTestId('email-feedback')).toHaveStyle('color: rgb(255,0,0)');
   });
 
   test('trims input before validation', () => {

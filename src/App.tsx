@@ -1,11 +1,11 @@
 import './App.css';
 
-import EmailValidatorInput from './components/EmailValidatorInput';
+import PasswordStrengthInput from './components/PasswordStrengthInput';
 
 
 function App() {
     return <>
-        <EmailValidatorInput />
+        <PasswordStrengthInput />
     </>;
 }
 
