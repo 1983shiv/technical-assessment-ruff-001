@@ -1,13 +1,10 @@
 import './App.css';
-import AccordionOpenAi from './components/Accordion';
-import Accordion from './components/Accordion-v2';
+import ClickCounter from './components/ClickCounter';
 
 
 function App() {
-
     return <>
-        <AccordionOpenAi />
-        <Accordion />
+        <ClickCounter />
     </>;
 }
 
