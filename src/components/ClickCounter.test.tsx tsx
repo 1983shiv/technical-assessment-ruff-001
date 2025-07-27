@@ -1,0 +1,22 @@
+import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, test, expect } from 'vitest';
+import ClickCounter from './ClickCounter';
+
+describe('ClickCounter Component', () => {
+  test('renders with initial count of 0', () => {
+    render(<ClickCounter />);
+    // TODO: Assert that "Count: 0" is shown in the document
+  });
+
+  test('increments count on button click', () => {
+    render(<ClickCounter />);
+    // TODO: Click the button
+    // TODO: Assert that the count is now 1
+  });
+
+  test('increments correctly after multiple clicks', () => {
+    render(<ClickCounter />);
+    // TODO: Click the button three times
+    // TODO: Assert that the count is 3
+  });
+});
