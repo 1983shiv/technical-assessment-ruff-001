@@ -1,10 +1,11 @@
 import './App.css';
-import ClickCounter from './components/ClickCounter';
+
+import EmailValidatorInput from './components/EmailValidatorInput';
 
 
 function App() {
     return <>
-        <ClickCounter />
+        <EmailValidatorInput />
     </>;
 }
 
