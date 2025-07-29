@@ -1,11 +1,12 @@
 import './App.css';
+import ControlledTextareaWithLimit from './components/ControlledTextareaWithLimit';
 
-import PasswordStrengthInput from './components/PasswordStrengthInput';
+
 
 
 function App() {
     return <>
-        <PasswordStrengthInput />
+        <ControlledTextareaWithLimit limit={10}/>
     </>;
 }
 
