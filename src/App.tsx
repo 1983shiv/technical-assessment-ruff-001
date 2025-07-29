@@ -1,12 +1,13 @@
 import './App.css';
-import ControlledTextareaWithLimit from './components/ControlledTextareaWithLimit';
+
+import { FeedbackForm } from './components/FeedbackForm';
 
 
 
 
 function App() {
     return <>
-        <ControlledTextareaWithLimit limit={10}/>
+        <FeedbackForm />
     </>;
 }
 
