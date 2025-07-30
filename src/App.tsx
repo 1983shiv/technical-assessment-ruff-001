@@ -1,13 +1,13 @@
 import './App.css';
 
-import { FeedbackForm } from './components/FeedbackForm';
+import { SignupForm } from './components/SignupForm';
 
 
 
 
 function App() {
     return <>
-        <FeedbackForm />
+        <SignupForm />
     </>;
 }
 
