@@ -1,13 +1,9 @@
 import './App.css';
-import { NewsletterSignup } from './components/NewsletterSignup';
-
-
-
-
+import { FeedbackForm } from './components/FeedbackForm_2';
 
 function App() {
     return <>
-        <NewsletterSignup />
+        <FeedbackForm />
     </>;
 }
 
