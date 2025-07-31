@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import { describe, beforeEach, it, expect } from 'vitest';
 import { SignupForm } from './SignupForm';

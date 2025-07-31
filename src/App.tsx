@@ -1,13 +1,13 @@
 import './App.css';
+import { NewsletterSignup } from './components/NewsletterSignup';
 
-import { SignupForm } from './components/SignupForm';
 
 
 
 
 function App() {
     return <>
-        <SignupForm />
+        <NewsletterSignup />
     </>;
 }
 

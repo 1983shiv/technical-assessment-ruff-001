@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'; // enables toHaveStyle and more matchers
 
 import { test, expect, describe } from 'vitest';

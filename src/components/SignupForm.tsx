@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 type FormData = {
   name: string;
@@ -54,10 +54,7 @@ export const SignupForm: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    console.log({form, errors})
-  }, [form, errors])
-  
+ 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;   
     
