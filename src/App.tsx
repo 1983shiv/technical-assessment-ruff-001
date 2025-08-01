@@ -1,10 +1,9 @@
 import './App.css';
-
-import ProductFilter from './components/ProductFilter';
+import { FeedbackForm } from './components/FeedbackForm_3';
 
 function App() {
     return <>
-        <ProductFilter />
+        <FeedbackForm />
     </>;
 }
 
