@@ -22,11 +22,21 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   ]);
 
   // TODO: Implement updateQuantity and removeItem logic
-  const updateQuantity = (id: string, quantity: number) => {
+  const updateQuantity = (id: string, quantity: number): void => {
     // TBD
+    const updatedItems = items.map((item) => {
+        if(item.id === id) {
+            return { ...item, quantity: Math.max(1, quantity) }; // Prevent quantity below 1
+        } else {
+            return item;
+        }
+    }) ;
+    setItems(updatedItems)
   };
   const removeItem = (id: string) => {
     // TBD
+    const updateItems = items.filter((item) => item.id !== id)
+    setItems(updateItems)
   };
 
   return (

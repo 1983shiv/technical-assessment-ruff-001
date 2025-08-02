@@ -1,9 +1,10 @@
 import './App.css';
-import { FeedbackForm } from './components/FeedbackForm_3';
+import CartSidebar from './components/CartSidebar';
+
 
 function App() {
     return <>
-        <FeedbackForm />
+        <CartSidebar />
     </>;
 }
 
