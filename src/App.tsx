@@ -1,10 +1,10 @@
 import './App.css';
-import CartSidebar from './components/CartSidebar';
+import Quiz from './components/Quiz';
 
 
 function App() {
     return <>
-        <CartSidebar />
+        <Quiz />
     </>;
 }
 
