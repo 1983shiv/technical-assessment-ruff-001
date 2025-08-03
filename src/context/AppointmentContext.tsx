@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useMemo, useState } from 'react';
 
 export interface Doctor {
   id: string;
@@ -34,13 +34,33 @@ export const AppointmentProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const [booked, setBooked] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+      // const validation check before booking.
+    const validateAppointment = ()  => {
+        if (!appointment.doctorId || !appointment.date || !appointment.time) {
+            console.log("All fields are required.")
+            console.log(appointment)
+            return 'All fields are required.';
+        }
+        return null;
+    };
+
   // TODO: Implement book logic with validation
   const book = () => {
+    const validationError = validateAppointment();
+    if(validationError !== null){
+        setError(validationError);
+        setBooked(false)
+    } else {
+        setBooked(true);
+        setError(null);
+        // Here you would typically send the appointment data to a server
+    }
     // TBD
   };
 
+  const storeValue = useMemo(() => ({ doctors, appointment, setAppointment, book, booked, error }), [doctors, appointment, booked, error])
   return (
-    <AppointmentContext.Provider value={{ doctors, appointment, setAppointment, book, booked, error }}>
+    <AppointmentContext.Provider value={storeValue}>
       {children}
     </AppointmentContext.Provider>
   );

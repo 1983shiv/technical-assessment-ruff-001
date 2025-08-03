@@ -1,10 +1,10 @@
 import './App.css';
-import Quiz from './components/Quiz';
+import AppointmentBooking from './components/AppointmentBooking';
 
 
 function App() {
     return <>
-        <Quiz />
+        <AppointmentBooking />
     </>;
 }
 
