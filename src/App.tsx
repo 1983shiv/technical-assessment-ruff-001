@@ -1,10 +1,10 @@
 import './App.css';
-import AppointmentBooking from './components/AppointmentBooking';
 
+import CartSidebar from './components/CartSidebar_19';
 
 function App() {
     return <>
-        <AppointmentBooking />
+        <CartSidebar />
     </>;
 }
 
