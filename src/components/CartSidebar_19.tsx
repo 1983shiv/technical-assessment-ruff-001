@@ -1,7 +1,7 @@
 // CartSidebar.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useCart } from '../context/CartContext_19';
-import { mockItems } from '../context/CartContext_19';
+
 
 
 const CartSidebar = () => {
@@ -15,10 +15,17 @@ const CartSidebar = () => {
 
   const cartValidation = (e: React.ChangeEvent<HTMLInputElement>, id: string) => {
     const value = e.target.value;
-    // console.log(value, id)
-    
+    const itemToUpdate = items.find((item) => item.id === id)
+    if(Number(value) > Number(itemToUpdate?.stock)){
+        // setErrors({ [id]: `Item has only ${itemToUpdate?.stock} qty available.` })
+        setErrors({ [id]: `Only ${itemToUpdate?.stock} in stock` })
+    }
     updateQuantity(id, Number(value))
   }
+
+  const cartTotal:number = items.reduce((acc, item) => {
+    return acc + (Number(item.price) * Number(item.quantity));
+    }, 0);
 
   return (
     <aside aria-label="Shopping cart">
@@ -41,7 +48,7 @@ const CartSidebar = () => {
           </li>
         ))}
       </ul>
-      <div>Total: $ {/* TODO: Calculate total */}</div>
+      <div>Total: $ {cartTotal}</div>
     </aside>
   );
 };

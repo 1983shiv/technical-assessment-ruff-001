@@ -36,11 +36,11 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const updateQuantity = (id: string, quantity: number) => {
     // TODO: Implement quantity update with validation (stock, min 1, numeric)
     const itemtoUpdate = items.find((item) => item.id === id)
-    console.log({itemtoUpdate})
+    
     if (!itemtoUpdate) return;
     if (quantity > itemtoUpdate.stock) return;
     if (quantity <= itemtoUpdate.stock) {
-      setItems((prev) => prev.map(item => item.id === id ? { ...item, quantity } : item));
+      setItems((prev) => prev.map(item => item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item));
     } 
   };
 

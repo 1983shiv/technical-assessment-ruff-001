@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { test, expect } from 'vitest';
-import { CartProvider } from '../context/CartContext_19';
+import { CartProvider, useCart } from '../context/CartContext_19';
 import CartSidebar from './CartSidebar_19';
 import { mockItems } from "../context/CartContext_19"
 
@@ -13,6 +13,7 @@ import { mockItems } from "../context/CartContext_19"
 
 function setup(items = mockItems) {
   // Custom provider for test
+  
   return render(
     <CartProvider>
       <CartSidebar />
