@@ -1,10 +1,10 @@
 import './App.css';
 
-import CartSidebar from './components/CartSidebar_19';
+import { PaymentMethodForm } from './components/PaymentMethodForm';
 
 function App() {
     return <>
-        <CartSidebar />
+        <PaymentMethodForm />
     </>;
 }
 

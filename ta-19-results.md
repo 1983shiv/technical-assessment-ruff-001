@@ -1,4 +1,3 @@
-ECHO is on.
 ## 📝 Technical Assessment Review: Cart Sidebar (E-Commerce)
 
 ### 1. **Correctness**
